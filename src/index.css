@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TIM Black Empresas Design System - Brazilian Telecom Landing Page */
+
+@layer base {
+  :root {
+    /* TIM Brand Colors - Blue Only Theme */
+    --tim-blue: 238 65% 55%;
+    --tim-blue-dark: 238 75% 45%;
+    --tim-blue-light: 238 55% 65%;
+    --tim-purple: 238 65% 55%;
+    --tim-orange: 238 65% 55%;
+    --tim-yellow: 238 65% 55%;
+    --tim-green: 238 65% 55%;
+    
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --text-white: 0 0% 100%;
+    --text-muted: 220 15% 65%;
+    
+    /* Card Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --card-shadow: 220 15% 90%;
+    
+    /* Primary System */
+    --primary: 238 65% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary System */
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    
+    /* Interactive Elements - Blue Only */
+    --button-green: 238 65% 55%;
+    --button-green-hover: 238 75% 45%;
+    --button-orange: 238 65% 55%;
+    --button-orange-hover: 238 75% 45%;
+    
+    /* Gradients - Blue Only */
+    --gradient-tim: linear-gradient(135deg, hsl(var(--tim-blue)), hsl(var(--tim-blue-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(238 65% 55%), hsl(238 75% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 20% 98%));
+    
+    /* Layout */
+    --container-max: 1200px;
+    --section-padding: 80px;
+    --border-radius: 12px;
+    --border-radius-lg: 16px;
+    
+    /* Typography */
+    --font-heading: 'Inter', -apple-system, sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px hsl(220 15% 85% / 0.3);
+    --shadow-button: 0 2px 8px hsl(var(--primary) / 0.3);
+    --shadow-hero: 0 10px 40px hsl(238 65% 35% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
+
+    /* Utility Variables */
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 238 65% 55%;
+    --radius: 12px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+  
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-padding {
+    padding: var(--section-padding) 0;
+  }
+  
+  .gradient-tim {
+    background: var(--gradient-tim);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+}
